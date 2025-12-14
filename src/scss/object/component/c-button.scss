@@ -1,0 +1,16 @@
+@use "foundation" as *;
+
+.c-button {
+  padding: prem(16) prem(32);
+  background-color: #ffb77a;
+  outline: 1px solid rgba($color: #191919, $alpha: 0.3);
+  outline-offset: -1px;
+  border-radius: prem(36);
+  font-size: prem(20);
+  display: inline-block;
+  width: 100%;
+  max-width: prem(245);
+  @include mq(md) {
+    font-size: prem(18);
+  }
+}

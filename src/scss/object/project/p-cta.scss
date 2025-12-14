@@ -1,0 +1,40 @@
+@use "foundation" as *;
+
+.p-cta {
+  padding: prem(60) 0;
+  background-color: #dfe697;
+  @include mq(md) {
+    padding: prem(40) 0;
+  }
+}
+
+.p-cta__inner {
+  max-width: calc($inner + $padding-pc * 2);
+  margin-inline: auto;
+  padding: 0 $padding-pc;
+  @include mq("md") {
+    padding: 0 $padding-sp;
+  }
+}
+
+.p-cta__sub-copy {
+  margin-top: prem(32);
+  font-size: prem(18);
+  text-align: center;
+  @include mq(md) {
+    margin-top: prem(24);
+    font-size: prem(16);
+  }
+}
+
+.p-cta__button-wrap {
+  margin-top: prem(32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: prem(40);
+  @include mq(md) {
+    flex-direction: column;
+    gap: prem(32);
+  }
+}

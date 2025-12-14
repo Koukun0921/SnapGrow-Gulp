@@ -1,0 +1,203 @@
+@use "foundation" as *;
+
+.p-plan {
+  padding: prem(80) 0;
+  @include mq("md") {
+    padding: prem(40) 0;
+  }
+}
+
+.p-plan__inner {
+  max-width: calc($inner + $padding-pc * 2);
+  margin-inline: auto;
+  padding: 0 $padding-pc;
+  width: 100%;
+  @include mq("md") {
+    padding: 0 $padding-sp;
+  }
+}
+
+.p-plan__text {
+  margin-top: prem(24);
+  font-size: prem(16);
+  text-align: center;
+}
+
+.p-plan__section {
+  margin-top: prem(40);
+  @include mq("md") {
+    margin-top: prem(32);
+  }
+}
+
+.p-plan__section-title {
+  font-size: prem(18);
+  font-weight: $regular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: $color-black;
+  }
+  &::before {
+    margin-right: prem(12);
+  }
+  &::after {
+    margin-left: prem(12);
+  }
+}
+
+.p-plan__plans {
+  margin-top: prem(40);
+  display: flex;
+  gap: prem(32);
+  justify-content: center;
+  @include mq("md") {
+    margin-top: prem(32);
+    flex-direction: column;
+    gap: prem(24);
+  }
+}
+
+.p-plan__plan-box {
+  flex: 1;
+  max-width: prem(500);
+  padding: prem(20) 0;
+  background-color: #fff6ea;
+  border: 4px solid #737373;
+  border-radius: prem(16);
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    max-width: 100%;
+    border: 3px solid #737373;
+  }
+}
+
+.p-plan__plan-name {
+  margin-inline: auto;
+  padding: 0 prem(16) prem(8);
+  width: fit-content;
+  font-size: prem(20);
+  font-weight: $regular;
+  text-align: center;
+  border-bottom: 2px dotted #a6a6a6;
+  @include mq("md") {
+    font-size: prem(18);
+  }
+}
+
+.p-plan__plan-label {
+  margin-top: prem(24);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(12);
+  }
+}
+
+.p-plan__plan-list {
+  margin-top: prem(24);
+  padding-bottom: prem(24);
+  text-align: center;
+}
+
+.p-plan__plan-price {
+  margin-top: auto;
+  padding-top: prem(20);
+  text-align: center;
+  font-size: prem(22);
+  color: #ff8ca5;
+  border-top: 1px solid #a6a6a6;
+  @include mq(md) {
+    font-size: prem(20);
+  }
+}
+
+.p-plan__plan-price-main,
+.p-plan__plan-price-tax {
+  display: block;
+}
+
+.p-plan__option-text {
+  margin-top: prem(16);
+  font-size: prem(16);
+  text-align: center;
+}
+
+.p-plan__options {
+  margin-top: prem(40);
+  display: flex;
+  gap: prem(24);
+  justify-content: center;
+  @include mq("md") {
+    margin-top: prem(32);
+    flex-direction: column;
+  }
+}
+
+.p-plan__option-box {
+  flex: 1;
+  max-width: prem(320);
+  padding: prem(20) 0;
+  border: 4px solid #737373;
+  border-radius: prem(16);
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    max-width: 100%;
+    border: 3px solid #737373;
+  }
+}
+
+.p-plan__option-box:last-child {
+  background-color: #fff6ea;
+}
+
+.p-plan__option-name {
+  padding: 0 prem(16) prem(8);
+  font-weight: $regular;
+  text-align: center;
+  border-bottom: 2px dotted #a6a6a6;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.p-plan__option-label {
+  margin-top: prem(20);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(18);
+  }
+}
+
+.p-plan__option-desc {
+  margin-top: prem(8);
+  padding-bottom: prem(20);
+  font-size: prem(14);
+  text-align: center;
+  @include mq("md") {
+    padding-bottom: prem(18);
+  }
+}
+
+.p-plan__option-price {
+  margin-top: auto;
+  padding-top: prem(20);
+  text-align: center;
+  border-top: 1px solid #a6a6a6;
+}
+
+.p-plan__option-price-main {
+  display: block;
+  color: #ff8ca5;
+}
+
+.p-plan__option-price-tax {
+  display: block;
+  color: #ff8ca5;
+}

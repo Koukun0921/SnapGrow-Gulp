@@ -20,7 +20,6 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <main>
     <header class="p-header l-header">
       <div class="p-header__inner">
         <h1 class="p-header__logo">

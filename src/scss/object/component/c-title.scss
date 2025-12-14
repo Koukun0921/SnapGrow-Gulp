@@ -1,36 +1,11 @@
-@use 'foundation' as *;
-// サンプルです
-// SPファースト
-@if $break-flg == 0 {
-  .c-title{
+@use "foundation" as *;
+
+.c-title {
+  font-weight: $medium;
+  font-size: prem(37);
+  color: $color-dark-blue;
+  text-align: center;
+  @include mq(md) {
     font-size: prem(24);
-    color: black;
-    @include mq(md){
-    color: red;
-    }
-    @include mq(lg){
-    color: blue;
-    }
-    @include mq(xl){
-    color: green;
-    }
-  }
-// PCファースト
-}@else {
-  .c-title {
-    font-size: prem(24);
-    color: green;
-
-    @include mq(xl) {
-      color: blue;
-    }
-
-    @include mq(lg) {
-      color: red;
-    }
-
-    @include mq(md) {
-      color: black;
-    }
   }
 }
