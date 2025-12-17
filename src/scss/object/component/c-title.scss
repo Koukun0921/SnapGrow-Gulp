@@ -6,6 +6,6 @@
   color: $color-dark-blue;
   text-align: center;
   @include mq(md) {
-    font-size: prem(24);
+    font-size: prem(22);
   }
 }

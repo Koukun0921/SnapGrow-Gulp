@@ -1,21 +1,21 @@
 <footer class="p-footer">
   <div class="p-footer__inner">
     <h2 class="p-footer__logo">
-      <a href="/">SnapGrow</a>
+      <a href="<?php echo esc_url(home_url('/')); ?>">SnapGrow</a>
     </h2>
     <nav class="p-footer__nav">
       <ul class="p-footer__nav-list">
         <li class="p-footer__nav-item">
-          <a href="#law">特定商取引法に基づく表記</a>
+          <a href="<?php page_path('law'); ?>">特定商取引法に基づく表記</a>
         </li>
         <li class="p-footer__nav-item">
-          <a href="#privacy">プライバシーポリシー</a>
+          <a href="<?php page_path('privacy'); ?>">プライバシーポリシー</a>
         </li>
         <li class="p-footer__nav-item">
-          <a href="#terms">利用規約</a>
+          <a href="<?php page_path('terms'); ?>">利用規約</a>
         </li>
         <li class="p-footer__nav-item">
-          <a href="#contact">お問い合わせ</a>
+          <a href="<?php echo esc_url(home_url('/') . '#cta'); ?>">お問い合わせ</a>
         </li>
       </ul>
     </nav>

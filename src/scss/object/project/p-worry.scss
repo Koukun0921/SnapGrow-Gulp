@@ -1,0 +1,87 @@
+@use "foundation" as *;
+
+.p-worry {
+  position: relative;
+  padding: prem(60) 0;
+  background-color: #fff9f4;
+  overflow-x: hidden;
+  @include mq(md) {
+    padding: prem(40) 0;
+  }
+}
+
+.p-worry__bg {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: prem(650);
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  z-index: 0;
+  @include mq("md") {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: prem(600);
+  }
+}
+
+.p-worry__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.p-worry__content {
+  margin-top: prem(60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: prem(100);
+}
+
+.p-worry__list {
+  display: grid;
+  gap: prem(32);
+  grid-template-columns: repeat(3, 1fr);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.p-worry__item {
+  width: prem(200);
+  height: prem(200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $color-white;
+  box-shadow: 0 0 prem(24) prem(-10) $color-black;
+  @include mq(md) {
+    width: prem(150);
+    height: prem(150);
+    box-shadow: 0 0 prem(18) prem(-8) $color-black;
+  }
+}
+
+.p-worry__item-text {
+  color: $color-dark-blue;
+  text-align: center;
+  @include mq(md) {
+    font-size: prem(14);
+  }
+}
+
+.p-worry__img {
+  width: 100%;
+  max-width: prem(210);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-worry__img img {
+  width: 100%;
+  aspect-ratio: 1 / 2;
+}

@@ -20,55 +20,56 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-    <header class="p-header l-header">
-      <div class="p-header__inner">
-        <h1 class="p-header__logo">
-          <a href="/">SnapGrow</a>
-        </h1>
-        <nav class="p-header__nav">
-          <ul class="p-header__nav-list">
-            <li class="p-header__nav-item">
-              <a href="#service">サービス内容</a>
+  <header class="p-header l-header">
+    <div class="p-header__inner">
+      <?php $logo_tag = is_front_page() ? 'h1' : 'div'; ?>
+      <<?php echo $logo_tag; ?> class="p-header__logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>">SnapGrow</a>
+      </<?php echo $logo_tag; ?>>
+      <nav class="p-header__nav">
+        <ul class="p-header__nav-list">
+          <li class="p-header__nav-item">
+            <a href="<?php echo esc_url(home_url('/') . '#strengths'); ?>">選ばれる理由</a>
+          </li>
+          <li class="p-header__nav-item">
+            <a href="<?php echo esc_url(home_url('/') . '#voice'); ?>">お客様の声</a>
+          </li>
+          <li class="p-header__nav-item">
+            <a href="<?php echo esc_url(home_url('/') . '#flow'); ?>">ご利用の流れ</a>
+          </li>
+          <li class="p-header__nav-item">
+            <a href="<?php echo esc_url(home_url('/') . '#plan'); ?>">料金プラン</a>
+          </li>
+          <li class="p-header__nav-item">
+            <a href="<?php echo esc_url(home_url('/') . '#cta'); ?>">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="p-header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="p-header__drawer js-drawer">
+        <nav class="p-header__drawer-nav">
+          <ul class="p-header__drawer-list">
+            <li class="p-header__drawer-item">
+              <a href="<?php echo esc_url(home_url('/') . '#strengths'); ?>">選ばれる理由</a>
             </li>
-            <li class="p-header__nav-item">
-              <a href="#strengths">選ばれる理由</a>
+            <li class="p-header__drawer-item">
+              <a href="<?php echo esc_url(home_url('/') . '#voice'); ?>">お客様の声</a>
             </li>
-            <li class="p-header__nav-item">
-              <a href="#plan">料金プラン</a>
+            <li class="p-header__drawer-item">
+              <a href="<?php echo esc_url(home_url('/') . '#flow'); ?>">ご利用の流れ</a>
             </li>
-            <li class="p-header__nav-item">
-              <a href="#qa">よくある質問</a>
+            <li class="p-header__drawer-item">
+              <a href="<?php echo esc_url(home_url('/') . '#plan'); ?>">料金プラン</a>
             </li>
-            <li class="p-header__nav-item">
-              <a href="#cta">お問い合わせ</a>
+            <li class="p-header__drawer-item">
+              <a href="<?php echo esc_url(home_url('/') . '#cta'); ?>">お問い合わせ</a>
             </li>
           </ul>
         </nav>
-        <button class="p-header__hamburger js-hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="p-header__drawer js-drawer">
-          <nav class="p-header__drawer-nav">
-            <ul class="p-header__drawer-list">
-              <li class="p-header__drawer-item">
-                <a href="#service">サービス内容</a>
-              </li>
-              <li class="p-header__drawer-item">
-                <a href="#strengths">選ばれる理由</a>
-              </li>
-              <li class="p-header__drawer-item">
-                <a href="#plan">料金プラン</a>
-              </li>
-              <li class="p-header__drawer-item">
-                <a href="#qa">よくある質問</a>
-              </li>
-              <li class="p-header__drawer-item">
-                <a href="#cta">お問い合わせ</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
       </div>
-    </header>
+    </div>
+  </header>

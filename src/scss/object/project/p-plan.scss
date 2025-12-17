@@ -1,19 +1,9 @@
 @use "foundation" as *;
 
 .p-plan {
-  padding: prem(80) 0;
+  padding: prem(60) 0;
   @include mq("md") {
     padding: prem(40) 0;
-  }
-}
-
-.p-plan__inner {
-  max-width: calc($inner + $padding-pc * 2);
-  margin-inline: auto;
-  padding: 0 $padding-pc;
-  width: 100%;
-  @include mq("md") {
-    padding: 0 $padding-sp;
   }
 }
 

@@ -5,20 +5,20 @@
   height: 100%;
   @include mq("md") {
     padding: initial;
-    height: 100svh;
+    height: auto;
   }
 }
 
 .p-hero__inner {
-  max-width: calc($inner + $padding-pc * 2);
-  margin-inline: auto;
-  padding: 0 $padding-pc;
-  width: 100%;
   display: flex;
   align-items: center;
   @include mq("md") {
-    padding: initial;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    height: auto;
     position: relative;
   }
 }
@@ -32,9 +32,13 @@
   animation: fadeInFromLeft 0.8s ease-out forwards;
   @include mq("md") {
     width: 100%;
+    max-width: 100%;
     height: 100%;
-    position: relative;
-    min-height: prem(400);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 
@@ -45,10 +49,7 @@
   @include mq("md") {
     border-radius: 0;
     width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 100%;
   }
 }
 
@@ -59,10 +60,23 @@
   transform: translateY(30px);
   animation: fadeInFromBottom 0.8s ease-out 0.3s forwards;
   @include mq("md") {
-    max-width: 100%;
-    padding: prem(32) prem(24);
-    position: absolute;
+    padding: prem(80) 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
+    z-index: 1;
+  }
+}
+
+.p-hero__text-wrap {
+  @include mq(md) {
+    padding: prem(10) prem(12);
+    border-radius: prem(16);
+    background-color: rgba($color: $color-white, $alpha: 0.4);
   }
 }
 

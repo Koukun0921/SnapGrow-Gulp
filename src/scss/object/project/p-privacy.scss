@@ -1,0 +1,66 @@
+@use "foundation" as *;
+
+.p-privacy {
+  padding: prem(120) 0 prem(60);
+  @include mq(md) {
+    padding: prem(100) 0 prem(40);
+  }
+}
+
+.p-privacy__heading {
+  font-weight: $medium;
+  font-size: prem(32);
+  @include mq(md) {
+    font-size: prem(24);
+  }
+}
+
+.p-privacy__content {
+  margin-top: prem(40);
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-privacy__introduction {
+  font-size: prem(18);
+  @include mq(md) {
+    font-size: prem(16);
+  }
+}
+
+.p-privacy__description-text {
+  margin-top: prem(8);
+  font-size: prem(18);
+  line-height: 1.8;
+  padding-bottom: prem(40);
+  border-bottom: 1px solid $color-sub-gray;
+  @include mq(md) {
+    font-size: prem(16);
+    padding-bottom: prem(20);
+  }
+}
+
+.p-privacy .wp-block-paragraph {
+  @extend .p-privacy__description-text;
+}
+
+.p-privacy .wp-block-heading {
+  font-weight: $medium;
+  margin-top: prem(40);
+  font-size: prem(20);
+  @include mq(md) {
+    margin-top: prem(32);
+    font-size: prem(18);
+  }
+}
+
+.p-privacy .wp-block-list {
+  margin-top: prem(16);
+  font-size: prem(18);
+  line-height: 1.8;
+  padding-left: 1.2em;
+  @include mq(md) {
+    font-size: prem(16);
+  }
+}

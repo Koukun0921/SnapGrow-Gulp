@@ -1,0 +1,25 @@
+@use "foundation" as *;
+
+.p-404 {
+  padding: prem(200) 0 prem(60);
+  @include mq(md) {
+    padding: prem(120) 0 prem(40);
+  }
+}
+
+.p-404__title {
+  font-weight: $medium;
+  font-size: prem(32);
+  text-align: center;
+  @include mq(md) {
+    font-size: prem(24);
+  }
+}
+
+.p-404__btn {
+  margin-top: prem(40);
+  text-align: center;
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}

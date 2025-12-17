@@ -1,0 +1,62 @@
+@use "foundation" as *;
+
+.p-strengths {
+  padding: prem(60) 0;
+  background-color: #f7f7f7;
+  @include mq(md) {
+    padding: prem(40) 0;
+  }
+}
+
+.p-strengths__cards {
+  margin-top: prem(40);
+  display: grid;
+  gap: prem(40) prem(60);
+  grid-template-columns: repeat(2, 1fr);
+  @include mq(md) {
+    margin-top: prem(32);
+    gap: prem(24) 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.p-strengths__card {
+  padding: prem(32);
+  background-color: $color-white;
+  border-radius: prem(36);
+  @include mq(md) {
+    padding: prem(24);
+    border-radius: prem(24);
+  }
+}
+
+.p-strengths__card-img {
+  width: 100%;
+  max-width: prem(50);
+  @include mq(md) {
+    max-width: prem(30);
+  }
+}
+
+.p-strengths__card-img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.p-strengths__card-title {
+  margin-top: prem(8);
+  padding: prem(6) 0 prem(6) prem(10);
+  font-weight: $medium;
+  font-size: prem(18);
+  color: $color-dark-blue;
+  border-left: 2px solid #b4b4b4;
+  @include mq(md) {
+    font-size: prem(16);
+  }
+}
+
+.p-strengths__card-text {
+  margin-top: prem(16);
+  font-size: prem(15);
+  color: $color-dark-blue;
+}

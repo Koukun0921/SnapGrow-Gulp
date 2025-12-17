@@ -8,15 +8,6 @@
   }
 }
 
-.p-cta__inner {
-  max-width: calc($inner + $padding-pc * 2);
-  margin-inline: auto;
-  padding: 0 $padding-pc;
-  @include mq("md") {
-    padding: 0 $padding-sp;
-  }
-}
-
 .p-cta__sub-copy {
   margin-top: prem(32);
   font-size: prem(18);
