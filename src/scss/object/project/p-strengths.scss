@@ -24,10 +24,15 @@
   padding: prem(32);
   background-color: $color-white;
   border-radius: prem(36);
+  opacity: 0;
   @include mq(md) {
     padding: prem(24);
     border-radius: prem(24);
   }
+}
+
+.p-strengths__card.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-strengths__card-img {

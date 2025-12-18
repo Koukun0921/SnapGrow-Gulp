@@ -58,11 +58,16 @@
   border-radius: 50%;
   background-color: $color-white;
   box-shadow: 0 0 prem(24) prem(-10) $color-black;
+  opacity: 0;
   @include mq(md) {
     width: prem(150);
     height: prem(150);
     box-shadow: 0 0 prem(18) prem(-8) $color-black;
   }
+}
+
+.p-worry__item.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-worry__item-text {

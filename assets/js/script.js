@@ -53,3 +53,25 @@ if (document.readyState === "loading") {
 } else {
   initHeader();
 }
+
+// フェードインアニメーション
+function initFadeIn() {
+  const fadeItems = document.querySelectorAll(".js-fadeIn");
+  if (!fadeItems.length) return;
+  const handleScroll = () => {
+    fadeItems.forEach((el, index) => {
+      const rect = el.getBoundingClientRect();
+      const triggerPosition = window.innerHeight * 0.75;
+      if (rect.top < triggerPosition) {
+        el.classList.add("is-active");
+      }
+    });
+  };
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initFadeIn);
+} else {
+  initFadeIn();
+}

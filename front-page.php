@@ -38,22 +38,22 @@
       <h2 class="p-worry__title c-title">皆さん、こんな悩みを<br class="u-sp">抱いていませんか？</h2>
       <div class="p-worry__content">
         <ul class="p-worry__list">
-          <li class="p-worry__item">
+          <li class="p-worry__item js-fadeIn">
             <p class="p-worry__item-text">明るさが<br>うまく整えられない</p>
           </li>
-          <li class="p-worry__item">
+          <li class="p-worry__item js-fadeIn">
             <p class="p-worry__item-text">上手くなりたいけど、<br>専門講座は重すぎる</p>
           </li>
-          <li class="p-worry__item">
+          <li class="p-worry__item js-fadeIn">
             <p class="p-worry__item-text">カフェ写真が<br>キレイに撮れない</p>
           </li>
-          <li class="p-worry__item">
+          <li class="p-worry__item js-fadeIn">
             <p class="p-worry__item-text">食べ物が<br>美味しそうに見えない</p>
           </li>
-          <li class="p-worry__item">
+          <li class="p-worry__item js-fadeIn">
             <p class="p-worry__item-text">構図が毎回バラバラで<br>“世界観が作れない”</p>
           </li>
-          <li class="p-worry__item">
+          <li class="p-worry__item js-fadeIn">
             <p class="p-worry__item-text">メルカリの商品が<br>思ったより売れない</p>
           </li>
         </ul>
@@ -72,7 +72,7 @@
     <div class="p-strengths__inner l-inner">
       <h2 class="p-strengths__title c-title">SnapGrowが選ばれる4つの理由</h2>
       <div class="p-strengths__cards">
-        <div class="p-strengths__card">
+        <div class="p-strengths__card js-fadeIn">
           <figure class="p-strengths__card-img">
             <img
               src="<?php assets_path(); ?>/images/common/strengths-img-01.webp"
@@ -83,7 +83,7 @@
           <h3 class="p-strengths__card-title">初心者向けに“ちょうどいい量だけ”教えてくれる</h3>
           <p class="p-strengths__card-text">PDFは10〜15ページ、添削は月3枚。<br>無理なく続けられる量に絞っているから、忙しくても取り組みやすい。</p>
         </div>
-        <div class="p-strengths__card">
+        <div class="p-strengths__card js-fadeIn">
           <figure class="p-strengths__card-img">
             <img
               src="<?php assets_path(); ?>/images/common/strengths-img-02.webp"
@@ -94,7 +94,7 @@
           <h3 class="p-strengths__card-title">スマホ撮影に完全特化した内容</h3>
           <p class="p-strengths__card-text">難しい設定や専門知識は不要。<br>スマホで“すぐ試せる撮り方”だけに特化しているから、その日から写真が変わる。</p>
         </div>
-        <div class="p-strengths__card">
+        <div class="p-strengths__card js-fadeIn">
           <figure class="p-strengths__card-img">
             <img
               src="<?php assets_path(); ?>/images/common/strengths-img-03.webp"
@@ -105,7 +105,7 @@
           <h3 class="p-strengths__card-title">送るだけで添削が届くシンプルさ</h3>
           <p class="p-strengths__card-text">3枚送るだけで、1枚ずつ改善ポイントを3つ提案。<br>構図や光の扱いなど、次に活かせる視点が自然と身につく。</p>
         </div>
-        <div class="p-strengths__card">
+        <div class="p-strengths__card js-fadeIn">
           <figure class="p-strengths__card-img">
             <img
               src="<?php assets_path(); ?>/images/common/strengths-img-04.webp"
@@ -124,7 +124,7 @@
     <div class="p-voice__inner l-inner">
       <h2 class="p-voice__title c-title">写真が変わった、その実感を<br class="u-sp">ご紹介します。</h2>
       <div class="p-voice__list">
-        <div class="p-voice__item">
+        <div class="p-voice__item js-fadeIn">
           <div class="p-voice__item-icon">
             <div class="p-voice__item-header">
               <span class="p-voice__item-rating">★5.0</span>
@@ -142,7 +142,7 @@
             <p class="p-voice__item-text">明るさの調整だけで、写真の見え方がこんなに変わるんだって驚きました。<br class="u-pc">添削が"ちょうどいい量"だから、無理なく続けられてます！</p>
           </div>
         </div>
-        <div class="p-voice__item">
+        <div class="p-voice__item js-fadeIn">
           <div class="p-voice__item-icon">
             <div class="p-voice__item-header">
               <span class="p-voice__item-rating">★5.0</span>
@@ -160,7 +160,7 @@
             <p class="p-voice__item-text">旅行先の写真が"映画っぽい"と言われるようになりました。<br class="u-pc">PDFの内容がスマホ前提だから、すぐ使えてありがたいです！</p>
           </div>
         </div>
-        <div class="p-voice__item">
+        <div class="p-voice__item js-fadeIn">
           <div class="p-voice__item-icon">
             <div class="p-voice__item-header">
               <span class="p-voice__item-rating">★4.8</span>
@@ -186,7 +186,7 @@
     <div class="p-flow__inner l-inner">
       <h2 class="p-flow__title c-title">明日から"上手く撮れる"を<br class="u-sp">実感できる6ステップ</h2>
       <div class="p-flow__steps">
-        <div class="p-flow__step">
+        <div class="p-flow__step js-fadeIn">
           <h3 class="p-flow__step-title">STEP 1｜会員登録（無料）</h3>
           <figure class="p-flow__step-img">
             <img
@@ -198,7 +198,7 @@
           <p class="p-flow__step-text">メールアドレスだけで登録完了。<br>スマホから1分でOK。</p>
           <div class="p-flow__arrow"></div>
         </div>
-        <div class="p-flow__step">
+        <div class="p-flow__step js-fadeIn">
           <div class="p-flow__step-number"></div>
           <h3 class="p-flow__step-title">STEP 2｜初月のPDFを受け取る</h3>
           <figure class="p-flow__step-img">
@@ -211,7 +211,7 @@
           <p class="p-flow__step-text">毎月のテーマに沿った10～15ページの<br>技術PDFをお届け。<br>今日から実践できる内容のみ。</p>
           <div class="p-flow__arrow"></div>
         </div>
-        <div class="p-flow__step">
+        <div class="p-flow__step js-fadeIn">
           <h3 class="p-flow__step-title">STEP 3｜写真を3枚送る</h3>
           <figure class="p-flow__step-img">
             <img
@@ -222,7 +222,7 @@
           </figure>
           <p class="p-flow__step-text">日常の写真でも、旅行でも、メルカリ商品でもOK。<br>スマホで撮って、そのまま送るだけ。</p>
         </div>
-        <div class="p-flow__step">
+        <div class="p-flow__step js-fadeIn">
           <h3 class="p-flow__step-title">STEP 4｜講評が届く（各3ポイント）</h3>
           <figure class="p-flow__step-img">
             <img
@@ -234,7 +234,7 @@
           <p class="p-flow__step-text">1枚につき「改善ポイント3つ」<br>光/構図/距離感などがすぐ分かる添削。</p>
           <div class="p-flow__arrow"></div>
         </div>
-        <div class="p-flow__step">
+        <div class="p-flow__step js-fadeIn">
           <h3 class="p-flow__step-title">STEP 5｜必要に応じてオプション追加</h3>
           <figure class="p-flow__step-img">
             <img
@@ -246,7 +246,7 @@
           <p class="p-flow__step-text">赤線ガイド・構図リメイク・追加講評など、<br>欲しいときだけ選べるライト課金。</p>
           <div class="p-flow__arrow"></div>
         </div>
-        <div class="p-flow__step">
+        <div class="p-flow__step js-fadeIn">
           <h3 class="p-flow__step-title">STEP 6｜翌月、また新しいPDFと添削へ</h3>
           <figure class="p-flow__step-img">
             <img
@@ -272,7 +272,7 @@
       <div class="p-plan__section">
         <h3 class="p-plan__section-title">プラン</h3>
         <div class="p-plan__plans">
-          <div class="p-plan__plan-box">
+          <div class="p-plan__plan-box js-fadeIn">
             <h4 class="p-plan__plan-name">基本プラン</h4>
             <p class="p-plan__plan-label">毎月セット内容</p>
             <ul class="p-plan__plan-list">
@@ -284,7 +284,7 @@
               <span class="p-plan__plan-price-tax">（税込2,178円）</span>
             </div>
           </div>
-          <div class="p-plan__plan-box">
+          <div class="p-plan__plan-box js-fadeIn">
             <h4 class="p-plan__plan-name">プレミアムプラン</h4>
             <p class="p-plan__plan-label">毎月セット内容</p>
             <ul class="p-plan__plan-list">
@@ -303,7 +303,7 @@
         <h3 class="p-plan__section-title">オプション</h3>
         <p class="p-plan__option-text">必要なときだけ追加できる“軽い課金”</p>
         <div class="p-plan__options">
-          <div class="p-plan__option-box">
+          <div class="p-plan__option-box js-fadeIn">
             <h4 class="p-plan__option-name">見える化ガイド（赤線）</h4>
             <p class="p-plan__option-label">サービス内容</p>
             <p class="p-plan__option-desc">構図・余白・焦点を赤線で示す</p>
@@ -312,7 +312,7 @@
               <span class="p-plan__option-price-tax">（税込+550円）</span>
             </div>
           </div>
-          <div class="p-plan__option-box">
+          <div class="p-plan__option-box js-fadeIn">
             <h4 class="p-plan__option-name">構図リメイク（トリミング2案）</h4>
             <p class="p-plan__option-label">サービス内容</p>
             <p class="p-plan__option-desc">あなたの写真を“プロ構図”に組み直し</p>
@@ -321,7 +321,7 @@
               <span class="p-plan__option-price-tax">（税込+1100円）</span>
             </div>
           </div>
-          <div class="p-plan__option-box">
+          <div class="p-plan__option-box js-fadeIn">
             <h4 class="p-plan__option-name">追加講評（1枚）</h4>
             <p class="p-plan__option-label">サービス内容</p>
             <p class="p-plan__option-desc">もっと見てほしい人向け</p>
@@ -344,8 +344,8 @@
         スマホだけで、いつもの日常が<br class="u-sp" />ちょっと綺麗に残せるように
       </p>
       <div class="p-cta__button-wrap">
-        <a href="" class="c-button">無料で始めてみる</a>
-        <a href="" class="c-button">まずは質問してみる</a>
+        <a href="" class="c-button js-fadeIn">無料で始めてみる</a>
+        <a href="" class="c-button js-fadeIn">まずは質問してみる</a>
       </div>
     </div>
   </section>

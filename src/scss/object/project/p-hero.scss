@@ -58,7 +58,7 @@
   text-align: center;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInFromBottom 0.8s ease-out 0.3s forwards;
+  animation: fadeInFromBottom 0.8s ease-out 0.8s forwards;
   @include mq("md") {
     padding: prem(80) 0;
     position: relative;

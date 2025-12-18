@@ -21,9 +21,14 @@
   display: flex;
   align-items: center;
   gap: prem(20);
+  opacity: 0;
   @include mq(md) {
     gap: prem(16);
   }
+}
+
+.p-voice__item.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-voice__item:nth-child(2n) {

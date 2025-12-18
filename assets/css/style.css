@@ -169,6 +169,16 @@ a:hover {
     transform: translateY(0);
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .l-header {
   position: fixed;
   z-index: 900;
@@ -378,6 +388,14 @@ a:hover {
   }
 }
 
+.p-cta__button-wrap a {
+  opacity: 0;
+}
+
+.p-cta__button-wrap a.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
 .p-flow {
   padding: 3.75rem 0;
   background-color: #fff4ee;
@@ -408,6 +426,11 @@ a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  opacity: 0;
+}
+
+.p-flow__step.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-flow__step-title {
@@ -829,7 +852,7 @@ a:hover {
   text-align: center;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInFromBottom 0.8s ease-out 0.3s forwards;
+  animation: fadeInFromBottom 0.8s ease-out 0.8s forwards;
 }
 @media screen and (max-width: 767px) {
   .p-hero__content {
@@ -1055,12 +1078,17 @@ a:hover {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  opacity: 0;
 }
 @media screen and (max-width: 767px) {
   .p-plan__plan-box {
     max-width: 100%;
     border: 3px solid #737373;
   }
+}
+
+.p-plan__plan-box.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-plan__plan-name {
@@ -1141,12 +1169,17 @@ a:hover {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  opacity: 0;
 }
 @media screen and (max-width: 767px) {
   .p-plan__option-box {
     max-width: 100%;
     border: 3px solid #737373;
   }
+}
+
+.p-plan__option-box.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-plan__option-box:last-child {
@@ -1305,12 +1338,17 @@ a:hover {
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 2.25rem;
+  opacity: 0;
 }
 @media screen and (max-width: 767px) {
   .p-strengths__card {
     padding: 1.5rem;
     border-radius: 1.5rem;
   }
+}
+
+.p-strengths__card.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-strengths__card-img {
@@ -1448,11 +1486,16 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  opacity: 0;
 }
 @media screen and (max-width: 767px) {
   .p-voice__item {
     gap: 1rem;
   }
+}
+
+.p-voice__item.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-voice__item:nth-child(2n) {
@@ -1646,6 +1689,7 @@ a:hover {
   border-radius: 50%;
   background-color: #ffffff;
   box-shadow: 0 0 1.5rem -0.625rem #000000;
+  opacity: 0;
 }
 @media screen and (max-width: 767px) {
   .p-worry__item {
@@ -1653,6 +1697,10 @@ a:hover {
     height: 9.375rem;
     box-shadow: 0 0 1.125rem -0.5rem #000000;
   }
+}
+
+.p-worry__item.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
 }
 
 .p-worry__item-text {
