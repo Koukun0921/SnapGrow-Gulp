@@ -38,10 +38,9 @@
   @include mq(md) {
     font-size: prem(32);
   }
-}
-
-.p-header__logo a:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .p-header__nav {
@@ -129,7 +128,7 @@
 }
 
 .p-header__drawer {
-  padding: prem(180) 0;
+  padding: prem(120) 0;
   position: absolute;
   z-index: 900;
   top: 0;

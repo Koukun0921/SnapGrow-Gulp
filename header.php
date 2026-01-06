@@ -12,9 +12,9 @@
     content="スマホだけで“写真が上手くなる人”を増やすための月額1,980円サービス" />
   <meta name="keywords" content="キーワード" />
   <!-- ファビコン -->
-  <link rel="icon" type="image/x-icon" href="<?php assets_path(); ?>/images/common/favicon.ico" />
+  <!-- <link rel="icon" type="image/x-icon" href="<?php assets_path(); ?>/images/common/favicon.ico" />
   <link rel="apple-touch-icon" href="<?php assets_path(); ?>/images/common/apple-touch-icon.png" sizes="256x256" />
-  <link rel="icon" type="image/png" href="<?php assets_path(); ?>/images/common/android-touch-icon.png" sizes="256x256">
+  <link rel="icon" type="image/png" href="<?php assets_path(); ?>/images/common/android-touch-icon.png" sizes="256x256"> -->
   <?php wp_head(); ?>
 </head>
 
@@ -39,6 +39,13 @@
           </li>
           <li class="p-header__nav-item">
             <a href="<?php echo esc_url(home_url('/') . '#plan'); ?>">料金プラン</a>
+                     
+          </li>
+          <li class="p-header__nav-item">
+            <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer">ログイン</a>
+          </li>
+          <li class="p-header__nav-item">
+            <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer">マイページ</a>
           </li>
           <li class="p-header__nav-item">
             <a href="<?php echo esc_url(home_url('/') . '#cta'); ?>">お問い合わせ</a>
@@ -64,6 +71,12 @@
             </li>
             <li class="p-header__drawer-item">
               <a href="<?php echo esc_url(home_url('/') . '#plan'); ?>">料金プラン</a>
+            </li>
+            <li class="p-header__drawer-item">
+              <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer">ログイン</a>
+            </li>
+            <li class="p-header__drawer-item">
+              <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer">マイページ</a>
             </li>
             <li class="p-header__drawer-item">
               <a href="<?php echo esc_url(home_url('/') . '#cta'); ?>">お問い合わせ</a>

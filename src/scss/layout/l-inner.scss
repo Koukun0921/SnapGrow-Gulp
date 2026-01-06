@@ -6,6 +6,7 @@
   padding: 0 $padding-pc;
   width: 100%;
   @include mq("md") {
+    max-width: calc(prem(600) + $padding-sp * 2);
     padding: 0 $padding-sp;
   }
 }

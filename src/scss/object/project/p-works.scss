@@ -1,0 +1,220 @@
+@use "foundation" as *;
+
+.p-works {
+  padding: prem(60) 0;
+  background-color: #f7f7f7;
+  @include mq(md) {
+    padding: prem(40) 0;
+  }
+}
+
+.p-works__content {
+  margin-top: prem(40);
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-works__content-item + .p-works__content-item {
+  margin-top: prem(40);
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-works__content-title {
+  padding-bottom: prem(8);
+  display: flex;
+  align-items: center;
+  gap: prem(8);
+  font-size: prem(24);
+  font-weight: $medium;
+  color: $color-dark-blue;
+  border-bottom: 1px solid $color-black;
+  @include mq(md) {
+    font-size: prem(20);
+  }
+}
+
+.p-works__content-title-img {
+  width: 100%;
+  max-width: prem(32);
+  aspect-ratio: 1 / 1;
+  @include mq(md) {
+    max-width: prem(24);
+  }
+}
+
+.p-works__content-title-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.p-works__content-description {
+  margin-top: prem(32);
+  font-size: prem(18);
+  color: $color-dark-blue;
+  @include mq(md) {
+    margin-top: prem(24);
+    font-size: prem(16);
+  }
+}
+
+.p-works__content-case-title {
+  display: block;
+  margin-top: prem(32);
+  font-size: prem(18);
+  color: $color-dark-blue;
+  @include mq(md) {
+    margin-top: prem(24);
+    font-size: prem(16);
+  }
+}
+
+.p-works__content-img-box {
+  margin-top: prem(24);
+  display: flex;
+  align-items: center;
+  @include mq(md) {
+    margin-top: prem(20);
+    gap: prem(10);
+    flex-direction: column;
+  }
+}
+
+.p-works__content-item:nth-child(2) .p-works__content-img-box {
+  margin-top: prem(8);
+}
+
+.p-works__content-img {
+  padding: prem(20) prem(20) 0;
+  flex: 1;
+  @include mq(md) {
+    padding: prem(10) prem(10) 0;
+  }
+}
+
+.p-works__content-img--before {
+  border: 1px solid $color-black;
+}
+
+.p-works__content-img--after {
+  margin-left: prem(32);
+  border: 4px solid $color-accent;
+  @include mq(md) {
+    margin-left: initial;
+  }
+}
+
+.p-works__content-img img {
+  width: 100%;
+  aspect-ratio: 550 / 309;
+  object-fit: cover;
+  display: block;
+}
+
+.p-works__content-img figcaption {
+  margin-top: prem(-20);
+  font-family: $font-family-en;
+  font-size: prem(36);
+}
+
+.p-works__content-img--before figcaption {
+  font-weight: $light;
+  color: $color-black;
+  @include text-outline($color-white, 1px);
+}
+
+.p-works__content-img--after figcaption {
+  font-weight: $medium;
+  color: $color-accent;
+  @include text-outline($color-white, 1px);
+}
+
+.p-works__content-arrow {
+  display: inline-block;
+  width: prem(80);
+  height: prem(60);
+  background: $color-accent;
+  clip-path: polygon(
+    0 27.9%,
+    58.7% 27.9%,
+    58.7% 0,
+    100% 50%,
+    58.7% 100%,
+    58.7% 72.1%,
+    0 72.1%
+  );
+  @include mq(md) {
+    width: prem(50);
+    height: prem(50);
+    clip-path: polygon(
+      0 54.7%,
+      27.9% 54.7%,
+      27.9% 0,
+      72.1% 0,
+      72.1% 54.7%,
+      100% 54.7%,
+      50% 100%
+    );
+  }
+}
+
+.p-works__content-text-box {
+  margin-top: prem(24);
+  margin-inline: auto;
+  padding: prem(16) prem(32);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: prem(800);
+  background-color: $color-accent;
+  border-radius: prem(24);
+  @include mq(md) {
+    flex-direction: column;
+    margin-top: prem(20);
+    padding: prem(16) prem(18);
+    border-radius: prem(18);
+  }
+}
+
+.p-works__content-text-box h4 {
+  flex: 1;
+  font-weight: $regular;
+  font-size: prem(24);
+  color: $color-dark-blue;
+  text-align: center;
+  @include mq(md) {
+    flex: none;
+    font-size: prem(20);
+  }
+}
+
+.p-works__content-text-box p {
+  flex: 4;
+  text-align: center;
+  @include mq(md) {
+    flex: none;
+    margin-top: prem(16);
+    text-align: left;
+  }
+}
+
+.p-works__content-title,
+.p-works__content-description,
+.p-works__content-img,
+.p-works__content-arrow,
+.p-works__content-case-title,
+.p-works__content-text-box {
+  opacity: 0;
+}
+
+.p-works__content-title.is-active,
+.p-works__content-description.is-active,
+.p-works__content-img.is-active,
+.p-works__content-arrow.is-active,
+.p-works__content-case-title.is-active,
+.p-works__content-text-box.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
+}

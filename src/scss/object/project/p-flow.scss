@@ -77,6 +77,9 @@
   width: prem(40);
   height: prem(2);
   background-color: $color-dark-blue;
+  @include mq(md) {
+    display: none;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -88,8 +91,5 @@
     border-top: prem(5) solid transparent;
     border-bottom: prem(5) solid transparent;
     border-left: prem(10) solid $color-dark-blue;
-  }
-  @include mq(md) {
-    display: none;
   }
 }

@@ -16,8 +16,8 @@
         </p>
       </div>
       <div class="p-hero__button-wrap">
-        <a href="#" class="c-button">無料で初めてみる</a>
-        <a href="#" class="c-button">まずは質問してみる</a>
+        <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer" class="c-button">気軽に始めてみる</a>
+        <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer" class="c-button">まずは質問してみる</a>
       </div>
     </div>
   </div>
