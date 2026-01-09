@@ -47,6 +47,12 @@ body {
   flex-direction: column;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 main {
   flex-grow: 1;
 }

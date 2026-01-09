@@ -16,8 +16,8 @@
         </p>
       </div>
       <div class="p-hero__button-wrap">
-        <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer" class="c-button">気軽に始めてみる</a>
-        <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer" class="c-button">まずは質問してみる</a>
+        <button type="button" class="c-button js-modal-trigger" data-modal="auth-modal">気軽に始めてみる</button>
+        <button type="button" class="c-button js-modal-trigger" data-modal="auth-modal">まずは質問してみる</button>
       </div>
     </div>
   </div>

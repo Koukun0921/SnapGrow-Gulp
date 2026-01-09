@@ -75,3 +75,77 @@ if (document.readyState === "loading") {
 } else {
   initFadeIn();
 }
+
+// モーダル機能
+function initModal() {
+  const triggers = document.querySelectorAll(".js-modal-trigger");
+  const modals = document.querySelectorAll(".js-modal");
+  const body = document.body;
+  if (!triggers.length || !modals.length) return;
+  // モーダルを開く
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    body.classList.add("is-modal-open");
+    // 最初のフォーカス可能な要素にフォーカス
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableElements.length) {
+      focusableElements[0].focus();
+    }
+  }
+  // モーダルを閉じる
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    body.classList.remove("is-modal-open");
+  }
+  // すべてのモーダルを閉じる
+  function closeAllModals() {
+    modals.forEach((modal) => closeModal(modal));
+  }
+  // トリガーボタンのイベントリスナー
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const modalId = trigger.getAttribute("data-modal");
+      if (modalId) {
+        openModal(modalId);
+      }
+    });
+  });
+  // 各モーダルのイベントリスナー
+  modals.forEach((modal) => {
+    // 閉じるボタン
+    const closeBtn = modal.querySelector(".js-modal-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => closeModal(modal));
+    }
+    // オーバーレイクリック
+    const overlay = modal.querySelector(".js-modal-overlay");
+    if (overlay) {
+      overlay.addEventListener("click", () => closeModal(modal));
+    }
+    // モーダル外クリック
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
+  // Escapeキーで閉じる
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeAllModals();
+    }
+  });
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initModal);
+} else {
+  initModal();
+}

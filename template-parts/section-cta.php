@@ -7,8 +7,8 @@
       スマホだけで、いつもの日常が<br class="u-sp" />ちょっと綺麗に残せるように
     </p>
     <div class="p-cta__button-wrap">
-      <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer" class="c-button js-fadeIn">気軽に始めてみる</a>
-      <a href="<?php page_path('login'); ?>" target="_blank" rel="noopener noreferrer" class="c-button js-fadeIn">まずは質問してみる</a>
+      <button type="button" class="c-button js-fadeIn js-modal-trigger" data-modal="auth-modal">気軽に始めてみる</button>
+      <button type="button" class="c-button js-fadeIn js-modal-trigger" data-modal="auth-modal">まずは質問してみる</button>
     </div>
   </div>
 </section>

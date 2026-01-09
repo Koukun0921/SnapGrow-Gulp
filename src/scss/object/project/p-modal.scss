@@ -1,0 +1,160 @@
+@use "../../foundation/" as *;
+
+.p-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.p-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-modal.is-open .p-modal__container {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.p-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color: $color-black, $alpha: 0.6);
+}
+
+.p-modal__container {
+  padding: 0 $padding-pc;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: calc(prem(600) + $padding-pc * 2);
+  transform: scale(0.6);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  @include mq(md) {
+    padding: 0 $padding-sp;
+    max-width: calc(prem(500) + $padding-sp * 2);
+  }
+}
+
+.p-modal__content {
+  position: relative;
+  padding: prem(48) prem(40);
+  background-color: $color-white;
+  border-radius: prem(16);
+  box-shadow: 0 prem(10) prem(40) rgba($color: $color-black, $alpha: 0.2);
+  @include mq(md) {
+    padding: prem(40) prem(24);
+  }
+}
+
+.p-modal__close {
+  position: absolute;
+  top: prem(16);
+  right: prem(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: prem(32);
+  height: prem(32);
+  padding: 0;
+  font-size: prem(28);
+  line-height: 1;
+  color: $color-sub-gray;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  &:hover,
+  &:focus {
+    color: $color-black;
+    background-color: $color-gray;
+  }
+}
+
+.p-modal__title {
+  font-size: prem(24);
+  font-weight: $medium;
+  color: $color-black;
+  text-align: center;
+  @include mq(md) {
+    font-size: prem(20);
+  }
+}
+
+.p-modal__text {
+  margin-top: prem(20);
+  color: $color-sub-gray;
+  text-align: center;
+  @include mq(md) {
+    margin-top: prem(16);
+    font-size: prem(14);
+  }
+}
+
+.p-modal__buttons {
+  display: flex;
+  gap: prem(20);
+  margin-top: prem(40);
+  @include mq(md) {
+    flex-direction: column;
+    gap: prem(16);
+    margin-top: prem(32);
+  }
+}
+
+.p-modal__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: prem(16) prem(24);
+  font-weight: $medium;
+  text-align: center;
+  text-decoration: none;
+  border-radius: prem(28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: prem(-4);
+    border-radius: prem(32);
+  }
+  &:hover {
+    transform: translateY(prem(-2));
+    box-shadow: 0 prem(4) prem(12) rgba($color: $color-black, $alpha: 0.15);
+  }
+}
+
+.p-modal__button:active {
+  transform: translateY(0);
+}
+
+.p-modal__button.p-modal__button--primary {
+  color: $color-white;
+  background-color: $color-black;
+}
+
+.p-modal__button.p-modal__button--secondary {
+  color: $color-black;
+  background-color: transparent;
+  border: prem(2) solid $color-black;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
+  }
+}
+
+body.is-modal-open {
+  overflow: hidden;
+}
